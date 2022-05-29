@@ -1,6 +1,7 @@
 package com.example.spring.circularDependency.Example3;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -11,6 +12,7 @@ public class ScopesIntegrationTest {
     private static final String NAME = "John Smith";
     private static final String NAME_OTHER = "Anna Jones";
 
+    @Ignore
     @Test
     public void givenSingletonScope_whenSetName_thenEqualNames() {
         final ApplicationContext applicationContext = new ClassPathXmlApplicationContext("scope.xml");
